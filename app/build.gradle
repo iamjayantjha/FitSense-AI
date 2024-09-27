@@ -1,0 +1,45 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+android.buildFeatures.buildConfig true
+android {
+    namespace 'ai.fitsense'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "ai.fitsense"
+        minSdk 28
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "API_KEY", "\"sk-hzNcF88x1PP5sjvsZLc-TtSlpB4gq5Pr7Wc9Ssr2B1T3BlbkFJMgP4ApqWAKvV8dVbP6p6Jmvtd0uN7cCK5CrZuNcE0A\"")
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    testImplementation libs.junit
+    implementation libs.retrofit
+    implementation libs.converter.gson
+    implementation libs.android.gif.drawable
+    implementation libs.gson
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}

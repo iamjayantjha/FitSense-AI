@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background">
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/animation_card"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="5000dp"
+        app:strokeWidth="0dp"
+        app:cardBackgroundColor="@color/default_color"
+        app:cardElevation="0dp"/>
+
+</RelativeLayout>
